@@ -105,6 +105,8 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
 .gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .gallery figcaption { font-size: 14px; color: var(--muted); }
 .gallery figcaption b { display: block; font-family: var(--f-mono); font-size: 12px; font-weight: 500; color: var(--accent); letter-spacing: .04em; }
+.gallery.wide { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.gallery figcaption strong { display: block; color: var(--fg); font-size: 16px; line-height: 1.3; margin-bottom: 2px; }
 .photo { display: block; width: 136px; height: 136px; object-fit: cover; object-position: center top; border-radius: 8px; border: 1px solid var(--line); }
 @media (min-width: 681px) { .photo { width: 156px; height: 156px; } }
 </style>
@@ -156,6 +158,14 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
         <h3>Perangkat lunak</h3>
         <div class="skills"><span>Microsoft Word</span><span>Microsoft Excel</span><span>Adobe Photoshop</span><span>Canva</span></div>
       </div>
+      <div class="skill-group">
+        <h3>Administrasi SDM (pelatihan)</h3>
+        <div class="skills"><span>Uraian jabatan</span><span>Administrasi jaminan sosial</span><span>Administrasi pengupahan</span><span>Administrasi kebijakan MSDM</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Bahasa Inggris</h3>
+        <div class="skills"><span>EF SET 65/100 (C1 Advanced)</span><span>ToPEL 427</span></div>
+      </div>
     </div>
   </section>
 
@@ -171,6 +181,7 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
           <li>Menjadi anggota Tim Pendamping Keluarga dan mendata seluruh ibu hamil di Kelurahan Pudak Payung, Kecamatan Banyumanik, serta ibu pasca melahirkan, sebagai bagian dari program pendampingan.</li>
           <li>Merancang dan memfasilitasi sesi bimbingan dan konseling kelompok yang diikuti seluruh anggota Tim Pendamping Keluarga Kelurahan Pudak Payung, untuk meningkatkan efektivitas kerja tim.</li>
           <li>Mengikuti seminar dari BKKBN Provinsi Jawa Tengah dan Disdalduk Kota Semarang untuk menambah wawasan program kependudukan dan keluarga.</li>
+          <li>Merancang poster edukasi tentang pernikahan dini.</li>
         </ul>
       </article>
       <article class="job">
@@ -214,10 +225,22 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
     </div>
   </section>
 
+  <section id="dokumentasi">
+    <h2>Dokumentasi Magang</h2>
+    <div class="body">
+      <p>Dokumentasi kegiatan selama magang di BKKBN Provinsi Jawa Tengah, ditempatkan di Disdalduk Kota Semarang (Februari – Juni 2022).</p>
+      <div class="gallery wide">
+        <figure><img src="dok-magang-1.jpg" alt="Dokumentasi magang: duduk bersama pegawai di meja bundar dalam ruang pertemuan" loading="lazy"></figure>
+        <figure><img src="dok-magang-2.jpg" alt="Dokumentasi magang: berdiskusi bersama pejabat dalam pertemuan di ruang terbuka" loading="lazy"></figure>
+        <figure><img src="dok-magang-3.jpg" alt="Dokumentasi magang: kegiatan bersama rekan di ruang rapat" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="desain">
     <h2>Contoh Desain</h2>
     <div class="body">
-      <p>Beberapa desain publikasi yang saya buat untuk BEM FIP UNNES. Nomor kontak dan rekening pada poster telah diburamkan.</p>
+      <p>Beberapa desain publikasi yang saya buat, termasuk untuk BEM FIP UNNES. Nomor kontak dan rekening pada poster telah diburamkan.</p>
       <div class="gallery">
         <figure>
           <img src="1-filosofi-logo.jpg" alt="Infografis Filosofi Logo PKKMB FIP 2022 dengan logo burung rangkong dan penjelasan makna bulu, buku, serta warna" loading="lazy">
@@ -235,6 +258,10 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
           <img src="4-digital-art.jpg" alt="Poster Digital Art Poster Competition bertema Reforming Education for Society 5.0 tahun 2020" loading="lazy">
           <figcaption><b>POSTER · 2020</b>Digital Art Poster Competition</figcaption>
         </figure>
+        <figure>
+          <img src="5-stop-pernikahan-dini.jpg" alt="Poster edukasi Stop Pernikahan Dini dengan logo UNNES dan BKKBN" loading="lazy">
+          <figcaption><b>POSTER EDUKASI · 2022</b>Stop Pernikahan Dini (dibuat saat magang di BKKBN)</figcaption>
+        </figure>
       </div>
       <p><a href="https://www.instagram.com/bemfippunnes" target="_blank" rel="noopener">Lihat lebih banyak di Instagram BEM FIP UNNES</a></p>
     </div>
@@ -249,11 +276,27 @@ section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; te
           <h3>S1 Bimbingan dan Konseling</h3>
           <p>Universitas Negeri Semarang (UNNES) · IPK 3,42 / 4,00</p>
         </div>
-        <div class="edu">
-          <span class="meta">2025</span>
-          <h3>Test of Proficiency in English Language (ToPEL)</h3>
-          <p>Skor 427 · Lembaga Pengembangan Pendidikan dan Profesi (LPPP) UNNES</p>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sertifikasi">
+    <h2>Sertifikasi</h2>
+    <div class="body">
+      <p>Sertifikat bahasa Inggris dan pelatihan administrasi HR. Pelatihan HRD adalah kelas persiapan untuk sertifikasi BNSP, bukan sertifikat kompetensi BNSP itu sendiri.</p>
+      <div class="gallery wide">
+        <figure>
+          <img src="sertif-efset.jpg" alt="Sertifikat EF SET dengan skor 65 dari 100, level C1 Advanced" loading="lazy">
+          <figcaption><b>BAHASA INGGRIS · OKTOBER 2026</b><strong>EF SET English Certificate</strong>Skor 65/100, level C1 Advanced. Reading 83 (C2), Listening 57 (B2), Writing 65 (C1), Speaking 56 (B2). <a href="https://cert.efset.org/A6YW2d" target="_blank" rel="noopener">Verifikasi sertifikat</a></figcaption>
+        </figure>
+        <figure>
+          <img src="sertif-hrd.jpg" alt="Sertifikat penyelesaian Kelas Staff HRD untuk Persiapan Sertifikasi BNSP dari yec.co.id" loading="lazy">
+          <figcaption><b>PELATIHAN · 1 NOVEMBER 2026</b><strong>Kelas Staff HRD untuk Persiapan Sertifikasi BNSP</strong>Program 2 jam dari yec.co.id. Kompetensi yang dilatih: menyusun uraian jabatan, administrasi jaminan sosial, administrasi pengupahan, dan administrasi penerapan kebijakan MSDM.</figcaption>
+        </figure>
+        <figure>
+          <img src="sertif-topel.jpg" alt="Sertifikat ToPEL Universitas Negeri Semarang dengan skor 427" loading="lazy">
+          <figcaption><b>BAHASA INGGRIS · MARET 2025</b><strong>ToPEL, skor 427</strong>Listening 48, Structure 37, Reading 43. Diselenggarakan oleh Lembaga Pengembangan Pendidikan dan Profesi (LPPP) UNNES.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
