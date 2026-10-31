@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Portofolio Fiar Noor Aditya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: satu kolom lebar 880px, bagian dipisah garis tipis, label bagian di kolom kiri pada layar lebar */
+:root {
+  --bg: #f4f6f7;
+  --surface: #ffffff;
+  --fg: #16212b;
+  --muted: #566573;
+  --line: #d7dde2;
+  --accent: #0a6c74;
+  --accent-soft: #dcefef;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f171d; --surface: #17222b; --fg: #e6edf2; --muted: #9aabb9;
+    --line: #2a3945; --accent: #5cc4cc; --accent-soft: #15353a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f171d; --surface: #17222b; --fg: #e6edf2; --muted: #9aabb9;
+  --line: #2a3945; --accent: #5cc4cc; --accent-soft: #15353a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+  padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.12; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Hero */
+.hero { display: flex; flex-direction: column; gap: 20px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+.label { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 700; letter-spacing: -.02em; }
+.hero .role { font-family: var(--f-display); font-size: clamp(1.15rem, 3vw, 1.5rem); font-weight: 500; color: var(--muted); }
+.hero .lead { max-width: 62ch; font-size: 1.12rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.btn {
+  font-family: var(--f-body); font-weight: 600; font-size: 15px; text-decoration: none;
+  padding: 11px 18px; border-radius: 6px; border: 1.5px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.ghost { color: var(--accent); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+
+/* Sections */
+section { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px 32px; }
+section > h2 { font-size: 1rem; font-family: var(--f-mono); font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding-top: 6px; }
+.body { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 8px; }
+.skills span { background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 15px; padding: 5px 12px; border-radius: 999px; }
+.skill-group { display: flex; flex-direction: column; gap: 8px; }
+.skill-group h3 { font-size: 1rem; font-weight: 700; }
+
+.job { display: flex; flex-direction: column; gap: 6px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.job:last-child { border-bottom: 0; padding-bottom: 0; }
+.job .meta { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.job h3 { font-size: 1.3rem; }
+.job .org { color: var(--muted); }
+.job ul { margin: 6px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.project h3 { font-size: 1.15rem; }
+.project .tag { font-family: var(--f-mono); font-size: 12px; color: var(--accent); }
+
+.edu { display: flex; flex-direction: column; gap: 2px; }
+.edu + .edu { margin-top: 16px; }
+.edu .meta { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+
+.contact { display: flex; flex-direction: column; gap: 12px; }
+.contact dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 20px; }
+.contact dt { font-family: var(--f-mono); font-size: 13px; color: var(--muted); padding-top: 3px; }
+.contact dd { margin: 0; overflow-wrap: anywhere; user-select: all; }
+
+@media (max-width: 680px) {
+  section { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .wrap { gap: 40px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn { transition: background .15s, color .15s; }
+  .btn.ghost:hover { background: var(--accent-soft); }
+  .btn.primary:hover { filter: brightness(1.1); }
+}
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; align-items: start; }
+.gallery figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.gallery figcaption { font-size: 14px; color: var(--muted); }
+.gallery figcaption b { display: block; font-family: var(--f-mono); font-size: 12px; font-weight: 500; color: var(--accent); letter-spacing: .04em; }
+.photo { display: block; width: 136px; height: 136px; object-fit: cover; object-position: center top; border-radius: 8px; border: 1px solid var(--line); }
+@media (min-width: 681px) { .photo { width: 156px; height: 156px; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img class="photo" src="fiar.jpg" alt="Foto Fiar Noor Aditya mengenakan jas hitam dan kemeja putih" width="156" height="156">
+    <span class="label">Portofolio Profesional</span>
+    <h1>Fiar Noor Aditya</h1>
+    <p class="role">Lulusan S1 Bimbingan dan Konseling</p>
+    <p class="lead">Fresh graduate dengan pengalaman praktik pendampingan keluarga, konseling kelompok, dan pengolahan data kuantitatif. Terbiasa melakukan wawancara terstruktur, observasi perilaku, dan analisis kebutuhan individu maupun kelompok. Relevan untuk peran Human Resources, People Development, Customer Relations, serta Community atau Public Relations.</p>
+    <div class="actions">
+      <a class="btn primary" href="#kontak">Hubungi saya</a>
+      <a class="btn ghost" href="#pengalaman">Lihat pengalaman</a>
+    </div>
+    <div class="facts">
+      <span>Cirebon, Jawa Barat</span>
+      <span>Lulus 2026 · IPK 3,42 / 4,00</span>
+      <span>Universitas Negeri Semarang</span>
+    </div>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang</h2>
+    <div class="body">
+      <p>Saya menempuh S1 Bimbingan dan Konseling di Universitas Negeri Semarang dan lulus pada 2026. Selama kuliah, saya belajar memahami kebutuhan orang lewat wawancara dan asesmen, lalu menerjemahkannya menjadi layanan yang tepat sasaran.</p>
+      <p>Di luar kelas, saya aktif di bidang media dan informasi organisasi mahasiswa, tempat saya membuat konten publikasi dan berkoordinasi dengan banyak divisi. Kombinasi ini membuat saya nyaman bekerja dengan orang, data, dan komunikasi sekaligus.</p>
+    </div>
+  </section>
+
+  <section id="keahlian">
+    <h2>Keahlian</h2>
+    <div class="body">
+      <div class="skill-group">
+        <h3>Interpersonal dan konseling</h3>
+        <div class="skills"><span>Wawancara terstruktur</span><span>Asesmen kebutuhan</span><span>Active listening</span><span>Membangun rapport</span><span>Fasilitasi kelompok</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Data dan administrasi</h3>
+        <div class="skills"><span>Analisis data statistik</span><span>Penyusunan laporan</span><span>Administrasi kantor</span><span>Pendataan</span><span>Pengelolaan dokumen</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Komunikasi dan publikasi</h3>
+        <div class="skills"><span>Desain feed Instagram</span><span>Press release</span><span>Koordinasi lintas divisi</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Perangkat lunak</h3>
+        <div class="skills"><span>Microsoft Word</span><span>Microsoft Excel</span><span>Adobe Photoshop</span><span>Canva</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pengalaman">
+    <h2>Pengalaman</h2>
+    <div class="body">
+      <article class="job">
+        <span class="meta">Februari – Juni 2022 · Semarang, Jawa Tengah</span>
+        <h3>Mahasiswa Magang Jurusan</h3>
+        <p class="org">BKKBN Provinsi Jawa Tengah, ditempatkan di Disdalduk Kota Semarang, Bidang KB dan Kesertaan ber-KB</p>
+        <ul>
+          <li>Membantu administrasi kantor dan pengelolaan dokumen program secara harian.</li>
+          <li>Menjadi anggota Tim Pendamping Keluarga dan mendata seluruh ibu hamil di Kelurahan Pudak Payung, Kecamatan Banyumanik, serta ibu pasca melahirkan, sebagai bagian dari program pendampingan.</li>
+          <li>Merancang dan memfasilitasi sesi bimbingan dan konseling kelompok yang diikuti seluruh anggota Tim Pendamping Keluarga Kelurahan Pudak Payung, untuk meningkatkan efektivitas kerja tim.</li>
+          <li>Mengikuti seminar dari BKKBN Provinsi Jawa Tengah dan Disdalduk Kota Semarang untuk menambah wawasan program kependudukan dan keluarga.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <span class="meta">Dua periode kepengurusan (2020 dan 2022) · Semarang, Jawa Tengah</span>
+        <h3>Staf Ahli Departemen Media dan Informasi</h3>
+        <p class="org">Badan Eksekutif Mahasiswa (BEM) FIP UNNES</p>
+        <ul>
+          <li>Membuat desain feed Instagram dan press release tentang informasi kemahasiswaan secara rutin selama dua periode kepengurusan, untuk kebutuhan publikasi organisasi.</li>
+          <li>Berkoordinasi dengan berbagai departemen internal agar kebutuhan publikasi dan penyebaran informasi selaras.</li>
+        </ul>
+        <p><a href="https://www.instagram.com/bemfippunnes" target="_blank" rel="noopener">Lihat akun Instagram BEM FIP UNNES</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="kegiatan">
+    <h2>Kegiatan Utama</h2>
+    <div class="body">
+      <div class="projects">
+        <article class="project">
+          <span class="tag">Pendampingan · 2022</span>
+          <h3>Pendampingan Keluarga</h3>
+          <p>Mendata seluruh ibu hamil di Kelurahan Pudak Payung, Kecamatan Banyumanik, sebagai anggota Tim Pendamping Keluarga.</p>
+        </article>
+        <article class="project">
+          <span class="tag">Konseling · 2022</span>
+          <h3>Konseling Kelompok untuk Tim</h3>
+          <p>Merancang dan memfasilitasi sesi bimbingan kelompok yang diikuti seluruh anggota Tim Pendamping Keluarga Kelurahan Pudak Payung.</p>
+        </article>
+        <article class="project">
+          <span class="tag">Publikasi · 2020 dan 2022</span>
+          <h3>Konten Informasi Kemahasiswaan</h3>
+          <p>Mendesain feed Instagram dan menulis press release untuk BEM FIP UNNES selama dua periode kepengurusan.</p>
+        </article>
+        <article class="project">
+          <span class="tag">Penelitian · Skripsi</span>
+          <h3>Penelitian Tugas Akhir</h3>
+          <p>Mewawancarai dan mengasesmen responden penelitian, lalu mengolah dan menafsirkan data statistik kuantitatif untuk menarik kesimpulan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="desain">
+    <h2>Contoh Desain</h2>
+    <div class="body">
+      <p>Beberapa desain publikasi yang saya buat untuk BEM FIP UNNES. Nomor kontak dan rekening pada poster telah diburamkan.</p>
+      <div class="gallery">
+        <figure>
+          <img src="1-filosofi-logo.jpg" alt="Infografis Filosofi Logo PKKMB FIP 2022 dengan logo burung rangkong dan penjelasan makna bulu, buku, serta warna" loading="lazy">
+          <figcaption><b>INFOGRAFIS · 2022</b>Filosofi Logo PKKMB FIP 2022</figcaption>
+        </figure>
+        <figure>
+          <img src="2-eic.jpg" alt="Poster Education Innovation Competition, lomba esai nasional tahun 2020" loading="lazy">
+          <figcaption><b>POSTER · 2020</b>Education Innovation Competition</figcaption>
+        </figure>
+        <figure>
+          <img src="3-debat.jpg" alt="Poster Lomba Debat Nasional Pendidikan oleh BEM FIP dan GS2 tahun 2020" loading="lazy">
+          <figcaption><b>POSTER · 2020</b>Lomba Debat Nasional Pendidikan</figcaption>
+        </figure>
+        <figure>
+          <img src="4-digital-art.jpg" alt="Poster Digital Art Poster Competition bertema Reforming Education for Society 5.0 tahun 2020" loading="lazy">
+          <figcaption><b>POSTER · 2020</b>Digital Art Poster Competition</figcaption>
+        </figure>
+      </div>
+      <p><a href="https://www.instagram.com/bemfippunnes" target="_blank" rel="noopener">Lihat lebih banyak di Instagram BEM FIP UNNES</a></p>
+    </div>
+  </section>
+
+  <section id="pendidikan">
+    <h2>Pendidikan</h2>
+    <div class="body">
+      <div>
+        <div class="edu">
+          <span class="meta">Lulus 2026</span>
+          <h3>S1 Bimbingan dan Konseling</h3>
+          <p>Universitas Negeri Semarang (UNNES) · IPK 3,42 / 4,00</p>
+        </div>
+        <div class="edu">
+          <span class="meta">2025</span>
+          <h3>Test of Proficiency in English Language (ToPEL)</h3>
+          <p>Skor 427 · Lembaga Pengembangan Pendidikan dan Profesi (LPPP) UNNES</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <div class="body contact">
+      <p>Terbuka untuk berbagai posisi yang sesuai dengan latar belakang saya. Silakan hubungi saya lewat kontak berikut.</p>
+      <dl>
+        <dt>Email</dt><dd>fiaraditya24@gmail.com</dd>
+        <dt>WhatsApp</dt><dd>0896-6103-5665</dd>
+        <dt>LinkedIn</dt><dd>linkedin.com/in/fiarnadtya</dd>
+        <dt>Domisili</dt><dd>Cirebon, Jawa Barat</dd>
+      </dl>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
